@@ -9,6 +9,9 @@ const bc= require(`./controllers/books_controller.js`)
 app.use(bodyParser.json());
 
 axios.get(`/api/books`, bc.read);
+axios.post(`/api/books`, bc.create);
+axios.put(`./app/books/:id`, bc.update);
+axios.delete(`./app/books/:id`, bc.delete);
 
 const port= 3000;
 
