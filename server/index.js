@@ -2,9 +2,13 @@ const express= require('express');
 
 const bodyParser= require('body-parser');
 
+const cors= require('cors');
+
 const app= express();
 
 const bc= require(`./controllers/books_controller.js`)
+
+app.use(cors());
 
 app.use(bodyParser.json());
 
